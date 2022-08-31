@@ -1,0 +1,21 @@
+{
+  "name": "@inseong-so/utils",
+  "version": "0.0.1",
+  "description": "패키지 배포 실습용 저장소",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "InSeong-So",
+  "license": "ISC",
+  "homepage": "https://github.com/InSeong-So/packages#readme",
+  "bugs": "https://github.com/InSeong-So/packages#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InSeong-So/packages.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
