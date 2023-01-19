@@ -1,11 +1,20 @@
 {
-  "name": "@inseong-so/utils",
-  "version": "0.0.1",
-  "description": "패키지 배포 실습용 저장소",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "name": "parang-utils",
+  "version": "0.0.9",
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "description": "functional library",
+  "sideEffects": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "deploy": "tsc && npm run build && npm publish --access=public"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./src/index.js"
+    }
   },
   "author": "InSeong-So",
   "license": "ISC",
@@ -16,6 +25,11 @@
     "url": "git+https://github.com/InSeong-So/packages.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "typescript": "^4.9.4"
   }
 }
