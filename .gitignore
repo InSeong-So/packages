@@ -103,3 +103,6 @@ typings/
 .tern-port
 
 .npmrc
+.vscode
+.idea
+package-lock.json
